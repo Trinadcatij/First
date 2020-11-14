@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 443.046, 297.153 )
+position = Vector2( 422.842, 220.826 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 2 )]
+position = Vector2( -152, 264 )
+
+[node name="StaticBody2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 568, 264 )
+
+[node name="StaticBody" parent="StaticBody2" instance=ExtResource( 2 )]
+position = Vector2( 720, 0 )
+
+[node name="StaticBody3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2008, 264 )
+
+[node name="StaticBody4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2728, 264 )
